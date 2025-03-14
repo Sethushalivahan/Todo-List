@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow Hub</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div id="weather-widget">Fetching weather...</div>
+
+    <section id="landing">
+        <h1>Welcome to TaskFlow Hub</h1>
+        <p>Manage tasks, get real-time updates, and stay productive!</p>
+        <button onclick="showAuth()">Get Started</button>
+    </section>
+    
+    <section id="auth" class="hidden">
+        <div id="login">
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Email" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button onclick="loginUser()">Login</button>
+        </div>
+    </section>
+    
+    <nav id="navbar" class="hidden">
+        <button onclick="showSection('todo')">Todo List</button>
+        <button onclick="logoutUser()">Logout</button>
+    </nav>
+    
+    <section id="todo" class="hidden">
+        <h2>Todo List</h2>
+        <input type="text" id="todo-input" placeholder="Enter Task">
+        <button onclick="addTask()">Add Task</button>
+        <ul id="task-list"></ul>
+    </section>
+    <script src="scripts.js"></script>
+
+</body>
+</html>
