@@ -5,23 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TaskFlow Hub</title>
     <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
     <div id="weather-widget">Fetching weather...</div>
 
+    <!-- Landing Page (Welcome Page) -->
     <section id="landing">
         <h1>Welcome to TaskFlow Hub</h1>
         <p>Manage tasks, get real-time updates, and stay productive!</p>
         <button onclick="showAuth()">Get Started</button>
     </section>
     
+    <!-- Authentication (Login / Sign-Up) -->
     <section id="auth" class="hidden">
         <div id="login">
             <h2>Login</h2>
             <input type="email" id="login-email" placeholder="Email" required>
             <input type="password" id="login-password" placeholder="Password" required>
             <button onclick="loginUser()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="toggleAuth()">Sign Up</a></p>
+        </div>
+    
+        <div id="signup" class="hidden">
+            <h2>Sign Up</h2>
+            <input type="text" id="signup-name" placeholder="Full Name" required>
+            <input type="email" id="signup-email" placeholder="Email" required>
+            <input type="password" id="signup-password" placeholder="Password" required>
+            <button onclick="signUpUser()">Sign Up</button>
+            <p>Already have an account? <a href="#" onclick="toggleAuth()">Login</a></p>
         </div>
     </section>
     
@@ -36,7 +47,7 @@
         <button onclick="addTask()">Add Task</button>
         <ul id="task-list"></ul>
     </section>
-    <script src="scripts.js"></script>
 
+    <script src="scripts.js"></script>
 </body>
 </html>
